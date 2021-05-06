@@ -17,6 +17,20 @@ const SearchContainer = styled.div`
     height: 4vh;
     font-size: ${({ theme }) => theme.fontSize.m};
   }
+  @media ${device.tabletL} {
+    font-size: ${({ theme }) => theme.fontSize.l};
+    height: 5vh;
+  }
+  @media ${device.laptop} {
+    font-size: ${({ theme }) => theme.fontSize.l};
+    width: 65vw;
+    height: 6vh;
+  }
+  @media ${device.desktop} {
+    font-size: ${({ theme }) => theme.fontSize.l};
+    width: 55vw;
+    height: 6vh;
+  }
 `;
 
 const StyledInput = styled.input`
@@ -32,9 +46,15 @@ const StyledInput = styled.input`
     border: 0.1em solid ${({ theme }) => theme.color.blue};
     color: ${({ theme }) => theme.color.dark};
   }
+  @media ${device.mobileLand} {
+    padding: 7px 20px 7px 6%;
+  }
   @media ${device.tablet} {
     width: 65%;
-    padding: 7px 20px;
+    padding-left: 6%;
+  }
+  @media ${device.tabletL} {
+    padding: 10px 10px 10px 8%;
   }
 `;
 
@@ -52,7 +72,10 @@ const Button = styled.button`
     background-color: ${({ theme }) => theme.color.darkBlue};
   }
   @media ${device.tablet} {
-    padding: 10px 19px;
+    padding: 10px 20px;
+  }
+  @media ${device.tabletL} {
+    padding: 10px 35px;
   }
 `;
 
@@ -64,6 +87,13 @@ const SearchIcon = styled(Search)`
   height: 85%;
   z-index: 5;
   color: ${({ theme }) => theme.color.grey};
+  @media ${device.tablet} {
+    left: 11%;
+    height: 90%;
+  }
+  @media ${device.tabletL} {
+    left: 11%;
+  }
 `;
 const SearchBar = () => {
   const [inputText, setInputText] = useState('');
