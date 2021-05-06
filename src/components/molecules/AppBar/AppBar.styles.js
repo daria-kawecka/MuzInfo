@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Musicbrainz } from '@styled-icons/simple-icons/Musicbrainz';
+import { device } from 'assets/styles/devices';
 
 export const LogoWrapper = styled.div`
   width: 45%;
@@ -8,6 +9,23 @@ export const LogoWrapper = styled.div`
   justify-content: space-around;
   align-items: center;
   padding: 8px;
+  @media ${device.mobileLand} {
+    width: 22%;
+    padding: 3px;
+  }
+  @media ${device.tablet} {
+    width: 35%;
+  }
+
+  @media ${device.tabletL} {
+    width: 30%;
+  }
+  @media ${device.desktop} {
+    width: 23%;
+  }
+  @media ${device.desktopL} {
+    width: 15%;
+  }
 `;
 
 export const Logo = styled(Musicbrainz)`
@@ -30,5 +48,8 @@ export const AppHeader = styled.h1`
   span {
     color: ${({ theme }) => theme.color.darkBlue};
     font-weight: 600;
+  }
+  @media ${device.tablet} {
+    font-size: 40px;
   }
 `;
