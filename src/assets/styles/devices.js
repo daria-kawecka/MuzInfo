@@ -3,8 +3,8 @@ const size = {
   mobileM: '375px',
   mobileL: '425px',
   tablet: '768px',
-  tabletL: '1366px',
-  laptop: '1024px',
+  tabletL: '1024px',
+  laptop: '1366px',
   desktop: '1440px',
   desktopL: '1920px',
 };

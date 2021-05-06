@@ -46,7 +46,7 @@ export const AppHeader = styled.h1`
   font-weight: 400;
   color: ${({ theme }) => theme.color.dark};
   span {
-    color: ${({ theme }) => theme.color.darkBlue};
+    color: ${({ theme }) => theme.color.blue};
     font-weight: 600;
   }
   @media ${device.tablet} {
