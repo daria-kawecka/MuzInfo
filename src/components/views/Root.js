@@ -3,7 +3,7 @@ import { ThemeProvider } from 'styled-components';
 import { GlobalStyle } from 'assets/styles/GlobalStyles';
 import { theme } from 'assets/styles/theme';
 import AppBar from 'components/molecules/AppBar/AppBar';
-import SearchBar from 'components/SearchBar';
+import SearchBar from 'components/organisms/SearchBar/SearchBar';
 const Root = () => {
   return (
     <ThemeProvider theme={theme}>
