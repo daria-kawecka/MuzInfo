@@ -1,28 +1,40 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import { Search } from '@styled-icons/evil/Search';
+import { device } from 'assets/styles/devices';
 
 const SearchContainer = styled.div`
   position: absolute;
   top: 15%;
+  width: 90vw;
   left: 50%;
   transform: translateX(-50%);
-  margin: 0 auto;
   display: flex;
+  justify-content: center;
   font-size: ${({ theme }) => theme.fontSize.s};
+  z-index: -1;
+  @media ${device.tablet} {
+    height: 4vh;
+    font-size: ${({ theme }) => theme.fontSize.m};
+  }
 `;
 
 const StyledInput = styled.input`
   border-radius: 8px;
-  padding: 7px 15px;
+  padding: 7px 15px 7px 10%;
   background-color: ${({ theme }) => theme.color.white};
   color: ${({ theme }) => theme.color.grey};
   border: 0.1em solid ${({ theme }) => theme.color.lightGrey};
   outline: none;
   margin-right: 5px;
-
+  width: 90%;
   &:focus {
     border: 0.1em solid ${({ theme }) => theme.color.blue};
     color: ${({ theme }) => theme.color.dark};
+  }
+  @media ${device.tablet} {
+    width: 65%;
+    padding: 7px 20px;
   }
 `;
 
@@ -39,8 +51,20 @@ const Button = styled.button`
   &:hover {
     background-color: ${({ theme }) => theme.color.darkBlue};
   }
+  @media ${device.tablet} {
+    padding: 10px 19px;
+  }
 `;
 
+const SearchIcon = styled(Search)`
+  position: absolute;
+  bottom: 50%;
+  left: 0;
+  transform: translateY(50%);
+  height: 85%;
+  z-index: 5;
+  color: ${({ theme }) => theme.color.grey};
+`;
 const SearchBar = () => {
   const [inputText, setInputText] = useState('');
 
@@ -50,6 +74,7 @@ const SearchBar = () => {
 
   return (
     <SearchContainer>
+      <SearchIcon />
       <StyledInput type="text" onChange={handleInputChange} placeholder="Search artists or albums" />
       <Button>Search</Button>
     </SearchContainer>
