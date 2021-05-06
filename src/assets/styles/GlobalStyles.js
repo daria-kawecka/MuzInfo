@@ -19,5 +19,5 @@ export const GlobalStyle = createGlobalStyle`
     overflow-x: hidden;
   }
   a, button {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
   }`;
