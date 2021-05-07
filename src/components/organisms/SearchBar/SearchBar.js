@@ -24,7 +24,9 @@ const SearchBar = () => {
       <SearchContainer>
         <SearchIcon />
         <StyledInput type="text" onChange={handleInputChange} value={inputText} placeholder="Search artists or albums" />
-        <Button onClick={handleClick}>Search</Button>
+        <Button onClick={handleClick} disabled={!inputText}>
+          Search
+        </Button>
       </SearchContainer>
     </>
   );

@@ -11,8 +11,14 @@ export const Button = styled.button`
   font-weight: 600;
   transition: 0.3s;
   font-family: 'Roboto', sans-serif;
+  cursor: pointer;
   &:hover {
     background-color: ${({ theme }) => theme.color.darkBlue};
+  }
+  &:disabled {
+    opacity: 30%;
+    background-color: ${({ theme }) => theme.color.dark};
+    cursor: default;
   }
   @media ${device.tablet} {
     padding: 10px 20px;

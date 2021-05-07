@@ -39,6 +39,7 @@ export const Appbar = styled.nav`
   width: 100vw;
   background-color: ${({ theme }) => theme.color.white};
   box-shadow: 0 0 18px 0 ${({ theme }) => theme.color.lightGrey};
+  grid-area: nav;
 `;
 
 export const AppHeader = styled.h1`

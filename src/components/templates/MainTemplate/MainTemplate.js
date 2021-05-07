@@ -9,7 +9,7 @@ const AppWrapper = styled.div`
   width: 100vw;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 0.2fr 0.1fr 1fr;
+  grid-template-rows: 10% 10% 2fr;
   gap: 15px 0;
   grid-template-areas:
     'nav'
