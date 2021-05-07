@@ -15,7 +15,7 @@ export const GetArtistInfo = (artist) => async (dispatch) => {
   } catch (e) {
     dispatch({
       type: 'GET_ARTIST_FAIL',
-      error: e.message,
+      error: 'Something went wrong!!!',
     });
   }
 };

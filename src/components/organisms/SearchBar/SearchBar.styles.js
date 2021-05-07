@@ -3,15 +3,18 @@ import { device } from 'assets/styles/devices';
 import { Search } from '@styled-icons/evil/Search';
 
 export const SearchContainer = styled.div`
-  position: absolute;
-  top: 15%;
+  position: relative;
+  top: 0;
+  left: 0;
   width: 90vw;
-  left: 50%;
-  transform: translateX(-50%);
+  //left: 50%;
+  //transform: translateX(-50%);
+  grid-area: search;
+  justify-self: center;
+  align-self: center;
   display: flex;
   justify-content: center;
   font-size: ${({ theme }) => theme.fontSize.s};
-  z-index: -1;
   @media ${device.tablet} {
     height: 4vh;
     font-size: ${({ theme }) => theme.fontSize.m};
