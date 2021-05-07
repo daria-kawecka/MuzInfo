@@ -1,13 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { AlbumShape } from 'types';
-import styled from 'styled-components';
 import { Button } from 'components/atoms/Button/Button';
+import styled from 'styled-components';
+import { device } from 'assets/styles/devices';
+
 const AlbumWrapper = styled.div`
   width: 175px;
-  min-height: 220px;
+  min-height: 250px;
   text-align: center;
   display: flex;
+  flex-grow: 1;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
@@ -17,13 +20,18 @@ const AlbumWrapper = styled.div`
   margin: 15px;
   padding: 18px;
   box-shadow: 0 11px 22px -15px ${({ theme }) => theme.color.grey};
+  @media ${device.desktopL} {
+    width: 260px;
+    height: 360px;
+    justify-content: space-evenly;
+  }
 `;
 const AlbumImage = styled.img`
   width: 100px;
   height: 100px;
   border-radius: 8px;
   margin-bottom: 2%;
-  box-shadow: 0px 5px 25px -10px ${({ theme }) => theme.color.grey};
+  box-shadow: 0 0px 25px -12px ${({ theme }) => theme.color.dark};
 `;
 const ArtistName = styled.p`
   font-size: ${({ theme }) => theme.fontSize.s};
