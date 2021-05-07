@@ -1,7 +1,7 @@
 import React from 'react';
-import AppBar from '../../molecules/AppBar/AppBar';
-import SearchBar from '../../organisms/SearchBar/SearchBar';
-import AlbumList from '../../organisms/AlbumList/AlbumList';
+import AppBar from 'components/molecules/AppBar/AppBar';
+import SearchBar from 'components/organisms/SearchBar/SearchBar';
+import AlbumList from 'components/organisms/AlbumList/AlbumList';
 import styled from 'styled-components';
 
 const AppWrapper = styled.div`
