@@ -1,14 +1,16 @@
 import styled from 'styled-components';
 import { Musicbrainz } from '@styled-icons/simple-icons/Musicbrainz';
 import { device } from 'assets/styles/devices';
+import { Link } from 'react-router-dom';
 
-export const LogoWrapper = styled.div`
+export const LogoWrapper = styled(Link)`
   width: 45%;
   height: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 8px;
+  text-decoration: none;
   @media ${device.mobileLand} {
     width: 22%;
     padding: 3px;

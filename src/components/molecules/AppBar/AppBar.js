@@ -4,7 +4,7 @@ import { Appbar, AppHeader, LogoWrapper, Logo } from './AppBar.styles';
 const AppBar = () => {
   return (
     <Appbar>
-      <LogoWrapper>
+      <LogoWrapper to="/">
         <Logo />
         <AppHeader>
           <span>Muz</span>Info
