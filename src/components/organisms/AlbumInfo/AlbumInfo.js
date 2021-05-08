@@ -2,9 +2,11 @@ import React from 'react';
 import { useHistory } from 'react-router-dom';
 //redux:
 import { useSelector } from 'react-redux';
+//components:
 import { AlbumContainer } from 'components/molecules/AlbumContainer/AlbumContainer';
 import SongList from 'components/molecules/SongList/SongList';
 import { AlbumImage } from 'components/atoms/AlbumImage/AlbumImage';
+import { BackIcon } from './AlbumInfo.styles';
 
 const AlbumInfo = () => {
   const AlbumData = useSelector((store) => store.albumInfo);
@@ -32,7 +34,7 @@ const AlbumInfo = () => {
   };
   return (
     <>
-      <button onClick={handleBack}>go back</button>
+      <BackIcon onClick={handleBack} />
       {ShowData()}
     </>
   );
