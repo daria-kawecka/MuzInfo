@@ -17,13 +17,13 @@ const Root = () => {
         <ThemeProvider theme={theme}>
           <GlobalStyle />
           <Switch>
-            <Route path="/album/:id">
-              <AlbumDashboard />
-            </Route>
-            <Route path="/">
+            <Route exact path="/">
               <MainTemplate />
             </Route>
-            {/*<Redirect to={'/'} />*/}
+            <Route path="/album/:albumID">
+              <AlbumDashboard />
+            </Route>
+            <Redirect to="/" />
           </Switch>
         </ThemeProvider>
       </Provider>
