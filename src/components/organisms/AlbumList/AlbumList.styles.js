@@ -12,6 +12,7 @@ export const ListWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+
   @media ${device.tablet} {
     width: 90vw;
     flex-direction: row;
@@ -31,4 +32,8 @@ export const SearchInfoText = styled.p`
     font-weight: bold;
     color: ${({ theme }) => theme.color.darkBlue};
   }
+`;
+export const ButtonWrapper = styled.div`
+  width: 100%;
+  margin: 20px 0 35px 0;
 `;
