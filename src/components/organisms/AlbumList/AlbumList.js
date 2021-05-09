@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import AlbumListElement from 'components/molecules/AlbumListElement/AlbumListElement';
 import ErrorText from 'components/atoms/ErrorText/ErrorText';
 import { SearchInfoText, ListWrapper } from './AlbumList.styles';
+import LoadingText from 'components/atoms/LoadingText/LoadingText';
 
 const AlbumList = () => {
   const List = useSelector((store) => store.artistInfo);
@@ -17,7 +18,7 @@ const AlbumList = () => {
       return <ErrorText />;
     }
     if (List.loading) {
-      return <p>Loading...</p>;
+      return <LoadingText />;
     }
     if (!List.data.length) {
       return <p>Search something!!!</p>;
