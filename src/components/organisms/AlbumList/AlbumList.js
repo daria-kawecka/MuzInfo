@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import AlbumListElement from 'components/molecules/AlbumListElement/AlbumListElement';
+import ErrorText from 'components/atoms/ErrorText/ErrorText';
 import { SearchInfoText, ListWrapper } from './AlbumList.styles';
 
 const AlbumList = () => {
@@ -13,7 +14,7 @@ const AlbumList = () => {
   const ShowData = () => {
     console.log(List.data.length);
     if ((List.data[0] && !List.data[0].length) || List.errorMsg) {
-      return <p>Oops... something went wrong! </p>;
+      return <ErrorText />;
     }
     if (List.loading) {
       return <p>Loading...</p>;
