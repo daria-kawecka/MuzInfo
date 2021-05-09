@@ -6,6 +6,7 @@ export const LoadingWrapper = styled.div`
   justify-content: center;
   align-items: center;
   margin: 70px auto;
+  cursor: default;
 `;
 
 export const LoadingText = styled.p`

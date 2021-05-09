@@ -13,10 +13,11 @@ export const GetArtistInfo = (artist) => async (dispatch) => {
       payload: tempRes,
       term: artist,
     });
-  } catch (e) {
+  } catch (error) {
     dispatch({
       type: 'GET_ARTIST_FAIL',
-      error: 'Something went wrong!!!',
+      term: artist,
+      error: error.message,
     });
   }
 };

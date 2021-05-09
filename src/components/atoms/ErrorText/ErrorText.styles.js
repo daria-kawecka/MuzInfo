@@ -9,6 +9,7 @@ export const ErrorWrapper = styled.div`
   justify-content: center;
   align-items: center;
   width: 60vw;
+  cursor: default;
 `;
 
 export const StyledError = styled.p`

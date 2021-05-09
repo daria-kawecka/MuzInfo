@@ -1,9 +1,10 @@
 import styled, { keyframes } from 'styled-components';
 import { Music } from '@styled-icons/boxicons-solid/Music';
-import { device } from '../../../assets/styles/devices';
+import { device } from 'assets/styles/devices';
 
 export const WelcomeTextWrapper = styled.div`
   margin-top: 70px;
+  cursor: default;
 `;
 export const Text = styled.p`
   font-size: ${({ theme }) => theme.fontSize.l};
@@ -33,5 +34,5 @@ const breathing = keyframes`
 export const MusicIcon = styled(Music)`
   height: 18vh;
   color: ${({ theme }) => theme.color.blue};
-  animation: ${breathing} 0.8s infinite forwards alternate-reverse;
+  animation: ${breathing} 1.5s infinite forwards alternate-reverse;
 `;
