@@ -4,7 +4,7 @@ import AlbumListElement from 'components/molecules/AlbumListElement/AlbumListEle
 import ErrorText from 'components/atoms/ErrorText/ErrorText';
 import { SearchInfoText, ListWrapper } from './AlbumList.styles';
 import LoadingText from 'components/atoms/LoadingText/LoadingText';
-import WelcomeText from '../../atoms/WelcomeText/WelcomeText.';
+import WelcomeText from 'components/atoms/WelcomeText/WelcomeText.';
 
 const AlbumList = () => {
   const List = useSelector((store) => store.artistInfo);

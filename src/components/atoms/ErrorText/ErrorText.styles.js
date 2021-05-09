@@ -5,7 +5,7 @@ import styled from 'styled-components';
 
 export const ErrorWrapper = styled.div`
   display: flex;
-  margin-top: 70px;
+  margin: ${(props) => (props.haveSmallMargin ? '10px' : '70px')} auto;
   justify-content: center;
   align-items: center;
   width: 60vw;

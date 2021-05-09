@@ -4,7 +4,7 @@ import { SongShape } from 'types';
 import { AlbumName } from 'components/atoms/AlbumName/AlbumName';
 import { ArtistName } from 'components/atoms/ArtistName/ArtistName';
 import { AdditionalText, SongName } from './SongList.styles';
-
+import ErrorText from 'components/atoms/ErrorText/ErrorText';
 const SongList = ({ data }) => {
   const { collectionName, artistName, copyright, primaryGenreName } = data[0];
   return (
@@ -13,9 +13,13 @@ const SongList = ({ data }) => {
       <AlbumName>{collectionName}</AlbumName>
       <AdditionalText>[{primaryGenreName}]</AdditionalText>
       {data.length > 1 ? (
-        data.slice(1).map((song, index) => <SongName key={index}>{index + 1 + '. ' + song.trackName}</SongName>)
+        data.slice(1).map((song, index) => (
+          <SongName key={index}>
+            <span>{index + 1 + '. '}</span> {song.trackName}
+          </SongName>
+        ))
       ) : (
-        <p>sorry problem with Api</p>
+        <ErrorText haveSmallMargin text={'Sorry, API did not provide this information :('} />
       )}
       <AdditionalText>{copyright}</AdditionalText>
     </>
@@ -25,4 +29,5 @@ const SongList = ({ data }) => {
 SongList.propTypes = {
   data: PropTypes.arrayOf(PropTypes.shape(SongShape)),
 };
+
 export default SongList;

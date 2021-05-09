@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { ErrorWrapper, ErrorIcon, StyledError } from './ErrorText.styles';
 
-const ErrorText = ({ text }) => {
+const ErrorText = ({ text, haveSmallMargin }) => {
   return (
-    <ErrorWrapper>
+    <ErrorWrapper haveSmallMargin={haveSmallMargin}>
       <ErrorIcon />
       <StyledError>{text}</StyledError>
     </ErrorWrapper>
@@ -12,5 +12,6 @@ const ErrorText = ({ text }) => {
 };
 ErrorText.propTypes = {
   text: PropTypes.string.isRequired,
+  haveSmallMargin: PropTypes.bool,
 };
 export default ErrorText;
