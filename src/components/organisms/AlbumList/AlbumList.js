@@ -16,7 +16,7 @@ const AlbumList = () => {
   const ShowData = () => {
     console.log(List);
     if ((List.data[0] && !List.data[0].length) || List.errorMsg) {
-      return <ErrorText />;
+      return <ErrorText text={'Oops... something went wrong!'} />;
     }
     if (List.loading) {
       return <LoadingText />;

@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes, { string } from 'prop-types';
+import PropTypes from 'prop-types';
 import { SongShape } from 'types';
 import { AlbumName } from 'components/atoms/AlbumName/AlbumName';
 import { ArtistName } from 'components/atoms/ArtistName/ArtistName';

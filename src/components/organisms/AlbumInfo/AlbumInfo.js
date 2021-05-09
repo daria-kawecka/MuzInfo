@@ -4,9 +4,9 @@ import { useHistory } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 //components:
 import { AlbumContainer } from 'components/molecules/AlbumContainer/AlbumContainer';
-import SongList from 'components/molecules/SongList/SongList';
 import { AlbumImage } from 'components/atoms/AlbumImage/AlbumImage';
 import { BackIcon } from './AlbumInfo.styles';
+import SongList from 'components/molecules/SongList/SongList';
 import ErrorText from 'components/atoms/ErrorText/ErrorText';
 import LoadingText from 'components/atoms/LoadingText/LoadingText';
 
@@ -16,7 +16,7 @@ const AlbumInfo = () => {
   const ShowData = () => {
     console.log(AlbumData);
     if ((AlbumData.data[0] && !AlbumData.data[0].length) || AlbumData.errorMsg) {
-      return <ErrorText />;
+      return <ErrorText text={'Oops... something went wrong!'} />;
     }
     if (AlbumData.loading) {
       return <LoadingText />;
