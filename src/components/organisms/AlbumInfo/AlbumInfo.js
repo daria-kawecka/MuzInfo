@@ -7,6 +7,8 @@ import { AlbumContainer } from 'components/molecules/AlbumContainer/AlbumContain
 import SongList from 'components/molecules/SongList/SongList';
 import { AlbumImage } from 'components/atoms/AlbumImage/AlbumImage';
 import { BackIcon } from './AlbumInfo.styles';
+import ErrorText from 'components/atoms/ErrorText/ErrorText';
+import LoadingText from 'components/atoms/LoadingText/LoadingText';
 
 const AlbumInfo = () => {
   const AlbumData = useSelector((store) => store.albumInfo);
@@ -14,10 +16,10 @@ const AlbumInfo = () => {
   const ShowData = () => {
     console.log(AlbumData);
     if ((AlbumData.data[0] && !AlbumData.data[0].length) || AlbumData.errorMsg) {
-      return <p>Oops... something went wrong! </p>;
+      return <ErrorText />;
     }
     if (AlbumData.loading) {
-      return <p>Loading...</p>;
+      return <LoadingText />;
     }
     if (AlbumData.data[0]) {
       console.log(AlbumData.data[0][0].artworkUrl100);

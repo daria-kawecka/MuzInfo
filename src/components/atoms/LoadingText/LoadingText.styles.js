@@ -5,7 +5,7 @@ export const LoadingWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 70px;
+  margin: 70px auto;
 `;
 
 export const LoadingText = styled.p`
