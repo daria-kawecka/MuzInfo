@@ -1,5 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 import { Music } from '@styled-icons/boxicons-solid/Music';
+import { device } from '../../../assets/styles/devices';
 
 export const WelcomeTextWrapper = styled.div`
   margin-top: 70px;
@@ -8,6 +9,10 @@ export const Text = styled.p`
   font-size: ${({ theme }) => theme.fontSize.l};
   color: ${({ theme }) => theme.color.darkGrey};
   margin-top: 15px;
+  @media ${device.desktop} {
+    font-size: ${({ theme }) => theme.fontSize.xl};
+    margin-top: 25px;
+  }
 `;
 const breathing = keyframes`
   0% {
