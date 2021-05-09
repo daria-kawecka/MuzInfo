@@ -8,7 +8,7 @@ export const SongName = styled.p`
   font-weight: 600;
   margin-bottom: 12px;
   padding: 12px;
-  border-bottom: 2px solid ${({ theme }) => theme.color.grey};
+  border-bottom: 2px solid ${({ theme }) => theme.color.lightGrey};
   span {
     font-size: ${({ theme }) => theme.fontSize.m};
     font-weight: 800;
