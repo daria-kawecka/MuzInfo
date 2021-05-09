@@ -12,7 +12,7 @@ const AlbumList = () => {
   }, [List]);
 
   const ShowData = () => {
-    console.log(List.data.length);
+    console.log(List);
     if ((List.data[0] && !List.data[0].length) || List.errorMsg) {
       return <ErrorText />;
     }
@@ -25,7 +25,9 @@ const AlbumList = () => {
     if (List.data[0]) {
       return (
         <>
-          <SearchInfoText>Search results for {List.data[0][0].artistName}</SearchInfoText>
+          <SearchInfoText>
+            Search results for <span>{List.term}</span>
+          </SearchInfoText>
           {List.data[0].map((el, index) => {
             return <AlbumListElement data={el} key={index} />;
           })}

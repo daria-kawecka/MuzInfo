@@ -11,6 +11,7 @@ export const GetArtistInfo = (artist) => async (dispatch) => {
     dispatch({
       type: 'GET_ARTIST_SUCCESS',
       payload: tempRes,
+      term: artist,
     });
   } catch (e) {
     dispatch({
