@@ -50,6 +50,16 @@ const ErrorIcon = styled(ErrorCircle)`
   width: 30%;
   color: ${({ theme }) => theme.color.warning};
   animation: ${errorShow} 0.4s;
+  margin-right: 15px;
+  @media ${device.mobileLand} {
+    width: 15%;
+  }
+  @media ${device.mobileL} {
+    width: 13%;
+  }
+  @media ${device.desktop} {
+    width: 8%;
+  }
 `;
 
 const ErrorWrapper = styled.div`
