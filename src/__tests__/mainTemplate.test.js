@@ -11,6 +11,6 @@ describe('Main Template', () => {
     screen.getByText('Info');
     screen.getByPlaceholderText('Search artists or albums');
     screen.getByText('Search');
-    screen.getByText('Search something!!!');
+    screen.getByText('What are we looking for?');
   });
 });
