@@ -13,6 +13,7 @@ const AlbumList = () => {
 
   useEffect(() => {
     ShowData();
+    setIndex(10);
   }, [List]);
   const handleClick = () => {
     setIndex((prev) => prev + 5);
