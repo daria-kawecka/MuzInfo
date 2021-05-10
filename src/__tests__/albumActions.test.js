@@ -21,13 +21,14 @@ const create = () => {
 };
 
 describe('Change Album Info', () => {
-  it('get action from artist actions', async () => {
+  it('Get action from artist actions', async () => {
     const store = mockStore();
-    await store.dispatch(GetAlbumInfo(726372830));
-    const actions = store.getActions();
-    expect(actions[0]).toEqual({ type: 'GET_ALBUM_LOADING' });
+    await store.dispatch(GetAlbumInfo(829909653));
+    const actions = await store.getActions();
+    expect(actions[0].type).toEqual('GET_ALBUM_LOADING');
+    expect(actions[1].type).toEqual('GET_ALBUM_FAIL');
   });
-  it('passes dispatch and getState', () => {
+  it('Passes dispatch and getState', () => {
     const { store, invoke } = create();
     invoke((dispatch, getState) => {
       dispatch('GET_ALBUM_SUCCESS');

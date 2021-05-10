@@ -1,5 +1,5 @@
 import React from 'react';
-import { fireEvent, queryByText, screen } from '@testing-library/react';
+import { fireEvent, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import { renderWithRouter } from 'helpers/renderWithRouter';
 import MainTemplate from 'components/templates/MainTemplate/MainTemplate';
@@ -23,7 +23,8 @@ describe('Search engine', () => {
     const button = screen.getByText('Search');
     fireEvent.change(input, { target: { value: 'coldplay' } });
     fireEvent.click(button);
-    await screen.findByText('Search results for Coldplay');
+    await screen.findByText('Search results for');
+    await screen.findByText('coldplay');
   });
   it('Shows album list', async () => {
     renderWithRouter(<MainTemplate />);

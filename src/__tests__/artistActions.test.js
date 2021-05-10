@@ -25,6 +25,7 @@ describe('Change Artist Info', () => {
     const store = mockStore();
     await store.dispatch(GetArtistInfo('Coldplay'));
     const actions = store.getActions();
+    console.log(actions);
     expect(actions[0]).toEqual({ type: 'GET_ARTIST_LOADING' });
   });
   it('passes dispatch and getState', () => {
