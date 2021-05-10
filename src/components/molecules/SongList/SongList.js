@@ -5,6 +5,7 @@ import { AlbumName } from 'components/atoms/AlbumName/AlbumName';
 import { ArtistName } from 'components/atoms/ArtistName/ArtistName';
 import { AdditionalText, SongName } from './SongList.styles';
 import ErrorText from 'components/atoms/ErrorText/ErrorText';
+
 const SongList = ({ data }) => {
   const { collectionName, artistName, copyright, primaryGenreName } = data[0];
   return (
