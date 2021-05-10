@@ -7,7 +7,7 @@ export const AlbumContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 15px auto;
+  margin: 20px auto;
   padding: 18px;
   box-shadow: 0 0 22px -15px ${({ theme }) => theme.color.grey};
   text-align: center;

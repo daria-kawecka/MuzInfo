@@ -6,16 +6,18 @@ export const GetArtistInfo = (artist) => async (dispatch) => {
       type: 'GET_ARTIST_LOADING',
     });
 
-    const res = await axios.get(`https://itunes.apple.com/search?term=${artist}&media=music&entity=album`);
+    const res = await axios.get(`https://cors.bridged.cc/https://itunes.apple.com/search?term=${artist}&media=music&entity=album`);
     let tempRes = res.data.results.filter((element) => element.trackCount > 1);
     dispatch({
       type: 'GET_ARTIST_SUCCESS',
       payload: tempRes,
+      term: artist,
     });
-  } catch (e) {
+  } catch (error) {
     dispatch({
       type: 'GET_ARTIST_FAIL',
-      error: 'Something went wrong!!!',
+      term: artist,
+      error: error.message,
     });
   }
 };

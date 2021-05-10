@@ -3,7 +3,7 @@ import { device } from 'assets/styles/devices';
 
 export const ListWrapper = styled.div`
   grid-area: list;
-  align-self: center;
+  align-self: start;
   justify-self: center;
   text-align: center;
   width: 80vw;
@@ -12,6 +12,7 @@ export const ListWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+
   @media ${device.tablet} {
     width: 90vw;
     flex-direction: row;
@@ -20,4 +21,19 @@ export const ListWrapper = styled.div`
 `;
 export const SearchInfoText = styled.p`
   width: 100%;
+  font-size: ${({ theme }) => theme.fontSize.m};
+  color: ${({ theme }) => theme.color.darkGrey};
+  letter-spacing: 0.05rem;
+  margin-bottom: 12px;
+  @media ${device.tabletL} {
+    font-size: ${({ theme }) => theme.fontSize.l};
+  }
+  span {
+    font-weight: bold;
+    color: ${({ theme }) => theme.color.darkBlue};
+  }
+`;
+export const ButtonWrapper = styled.div`
+  width: 100%;
+  margin: 20px 0 35px 0;
 `;

@@ -6,7 +6,7 @@ export const GetAlbumInfo = (collectionId) => async (dispatch) => {
       type: 'GET_ALBUM_LOADING',
     });
 
-    const res = await axios.get(`https://itunes.apple.com/lookup?id=${collectionId}&entity=song`);
+    const res = await axios.get(`https://cors.bridged.cc/https://itunes.apple.com/lookup?id=${collectionId}&entity=song`);
     dispatch({
       type: 'GET_ALBUM_SUCCESS',
       payload: res.data.results,
