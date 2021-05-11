@@ -18,12 +18,21 @@ const SearchBar = () => {
     dispatch(GetArtistInfo(inputText));
     setInputText('');
   };
+  const handleSearchOnEnter = (e) => {
+    if (e.keyCode === 13) handleClick();
+  };
 
   return (
     <>
       <SearchContainer>
         <SearchIcon />
-        <StyledInput type="text" onChange={handleInputChange} value={inputText} placeholder="Search artists or albums" />
+        <StyledInput
+          type="text"
+          onChange={handleInputChange}
+          onKeyDown={handleSearchOnEnter}
+          value={inputText}
+          placeholder="Search artists or albums"
+        />
         <Button onClick={handleClick} disabled={!inputText}>
           Search
         </Button>
