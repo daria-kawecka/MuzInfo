@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/MuzInfo/static/js/main.31f73ae0.chunk.js",
-    "main.js.map": "/MuzInfo/static/js/main.31f73ae0.chunk.js.map",
+    "main.js": "/MuzInfo/static/js/main.01fd4901.chunk.js",
+    "main.js.map": "/MuzInfo/static/js/main.01fd4901.chunk.js.map",
     "runtime-main.js": "/MuzInfo/static/js/runtime-main.71cdf2e9.js",
     "runtime-main.js.map": "/MuzInfo/static/js/runtime-main.71cdf2e9.js.map",
     "static/css/2.679831fc.chunk.css": "/MuzInfo/static/css/2.679831fc.chunk.css",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.71cdf2e9.js",
     "static/css/2.679831fc.chunk.css",
     "static/js/2.6ee1724c.chunk.js",
-    "static/js/main.31f73ae0.chunk.js"
+    "static/js/main.01fd4901.chunk.js"
   ]
 }
