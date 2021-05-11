@@ -13,12 +13,13 @@ const AlbumList = () => {
 
   useEffect(() => {
     ShowData();
+    setIndex(10);
   }, [List]);
   const handleClick = () => {
     setIndex((prev) => prev + 5);
   };
   const ShowData = () => {
-    console.log(List);
+    // console.log(List);
     if ((List.data[0] && !List.data[0].length) || List.errorMsg) {
       return <ErrorText text={'Oops... something went wrong!'} />;
     }
