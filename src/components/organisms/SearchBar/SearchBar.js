@@ -15,7 +15,7 @@ const SearchBar = () => {
     setInputText(e.target.value);
   };
   const handleClick = () => {
-    dispatch(GetArtistInfo(inputText));
+    dispatch(GetArtistInfo(inputText.toLowerCase()));
     setInputText('');
   };
   const handleSearchOnEnter = (e) => {

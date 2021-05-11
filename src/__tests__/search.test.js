@@ -23,6 +23,7 @@ describe('Search engine', () => {
     const button = screen.getByText('Search');
     fireEvent.change(input, { target: { value: 'coldplay' } });
     fireEvent.click(button);
+    await screen.findByText('Loading...');
     await screen.findByText('Search results for');
     await screen.findByText('coldplay');
   });

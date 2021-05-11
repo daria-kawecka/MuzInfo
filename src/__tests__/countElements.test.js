@@ -11,6 +11,7 @@ describe('Count album elements', () => {
     const button = screen.getByText('Search');
     fireEvent.change(input, { target: { value: 'Coldplay' } });
     fireEvent.click(button);
+    await screen.findAllByText('Loading...');
     await screen.findAllByText(/coldplay/i);
     let elements = screen.getAllByText(/coldplay/i);
     expect(elements).toHaveLength(11);
