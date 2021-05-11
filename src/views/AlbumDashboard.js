@@ -1,12 +1,15 @@
 import React, { useEffect } from 'react';
+//react-router:
+import { useParams } from 'react-router-dom';
+//redux:
+import { GetAlbumInfo } from 'actions/albumActions';
+import { useDispatch } from 'react-redux';
+//components:
 import AlbumInfo from 'components/organisms/AlbumInfo/AlbumInfo';
 import AppBar from 'components/molecules/AppBar/AppBar';
-import { GetAlbumInfo } from 'actions/albumActions';
-import { useParams } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+
 const AlbumDashboard = () => {
   const { albumID } = useParams();
-  console.log(albumID);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(GetAlbumInfo(albumID));

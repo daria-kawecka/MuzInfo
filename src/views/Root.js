@@ -2,7 +2,7 @@ import React from 'react';
 //redux provider:
 import { Provider } from 'react-redux';
 import store from 'store/store';
-//styled-componets provider:
+//styled-components provider:
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyle } from 'assets/styles/GlobalStyles';
 import { theme } from 'assets/styles/theme';

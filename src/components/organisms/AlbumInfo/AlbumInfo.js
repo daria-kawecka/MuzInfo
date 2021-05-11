@@ -14,7 +14,6 @@ const AlbumInfo = () => {
   const AlbumData = useSelector((store) => store.albumInfo);
   const history = useHistory();
   const ShowData = () => {
-    console.log(AlbumData);
     if ((AlbumData.data[0] && !AlbumData.data[0].length) || AlbumData.errorMsg) {
       return <ErrorText text={'Oops... something went wrong!'} />;
     }
@@ -22,7 +21,6 @@ const AlbumInfo = () => {
       return <LoadingText />;
     }
     if (AlbumData.data[0]) {
-      console.log(AlbumData.data[0][0]);
       return (
         <AlbumContainer>
           <AlbumImage src={AlbumData.data[0][0].artworkUrl100} alt={`album-${AlbumData.data[0][0].collectionId}`} />

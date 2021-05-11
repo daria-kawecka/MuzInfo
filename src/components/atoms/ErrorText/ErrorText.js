@@ -1,5 +1,7 @@
 import React from 'react';
+//prop-types:
 import PropTypes from 'prop-types';
+//components:
 import { ErrorWrapper, ErrorIcon, StyledError } from './ErrorText.styles';
 
 const ErrorText = ({ text, haveSmallMargin }) => {

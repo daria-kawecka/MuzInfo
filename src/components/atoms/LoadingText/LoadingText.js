@@ -1,4 +1,5 @@
 import React from 'react';
+//components:
 import { ScaleLoader } from 'react-spinners';
 import { LoadingWrapper, LoadingText } from './LoadingText.styles';
 
